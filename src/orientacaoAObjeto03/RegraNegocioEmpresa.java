@@ -2,13 +2,14 @@ package orientacaoAObjeto03;
 
 public class RegraNegocioEmpresa {
     private Empresa[] arrayEmp = new Empresa[3];
+    private int index = 0;
 
     public void cadastrarEmpresa(Empresa emp) {
-        for (int i = 0; i < arrayEmp.length; i++) {
-            if (arrayEmp[i] == null) {
-                arrayEmp[i] = emp;
-                break;
-            }
+        if (index < arrayEmp.length) {
+            arrayEmp[index] = emp;
+            index++;
+        } else {
+            System.out.println("Vetor cheio!");
         }
     }
 

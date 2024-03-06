@@ -49,4 +49,9 @@ public class Empresa {
         this.telefone = telefone;
     }
 
+    @Override
+    public String toString() {
+        return "empresa: \n[id=" + id + ", cnpj=" + cnpj + ", nome=" + nome + ", telefone=" + telefone + "]\n";
+    }
+
 }

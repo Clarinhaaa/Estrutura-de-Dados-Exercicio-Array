@@ -1,5 +1,7 @@
 package orientacaoAObjeto03;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         RegraNegocioEmpresa regNegEmp = new RegraNegocioEmpresa();
@@ -21,21 +23,10 @@ public class Main {
 
         //impressão dos dados na tela
 
-        System.out.println("= DADOS DOS FUNCIONÁRIOS E SUAS EMPRESAS =");
-        for (Funcionario fun : regNegFun.listarFuncionario()) {
-            System.out.println("- Funcionário:");
-            System.out.println("ID: " + fun.getId() + 
-                                "\nCPF: " + fun.getCpf() +
-                                "\nNome: " + fun.getNome() +
-                                "\nRG: " + fun.getRg() +
-                                "\nTelefone: " + fun.getTelefone());
-            System.out.println();
-            System.out.println("- Empresa:");
-            System.out.println("ID: " + fun.getEmpresa().getId() + 
-                                "\nCNPJ: " + fun.getEmpresa().getCnpj() +
-                                "\nNome: " + fun.getEmpresa().getNome() +
-                                "\nTelefone: " + fun.getEmpresa().getTelefone());
-            System.out.println("\n- - - - - - - - - -\n");
-        }
+        System.out.println("= EMPRESAS =");
+        System.out.println(Arrays.toString(regNegEmp.listarEmpresa()));
+        System.out.println();
+        System.out.println("= FUNCIONÁRIOS =");
+        System.out.println(Arrays.toString(regNegFun.listarFuncionario()));
     }
 }
